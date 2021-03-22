@@ -8,6 +8,5 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/article")
 public class ArticleController {
 	@GetMapping("/1")
-	public void article1() {}
-	
+	public void article1() {}	
 }
