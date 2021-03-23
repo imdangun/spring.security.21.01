@@ -1,33 +1,32 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0"
-	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns='http://maven.apache.org/POM/4.0.0'
+	xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+	xsi:schemaLocation='http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd'>
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.study</groupId>
-	<artifactId>spring.security</artifactId>
+	<artifactId>spring.securiy</artifactId>
 	<packaging>war</packaging>
 	<version>1.0</version>
 	
-	<properties>
-		<boot.ver>2.4.3</boot.ver>
-	</properties>
+	<parent>
+	    <groupId>org.springframework.boot</groupId>
+	    <artifactId>spring-boot-starter-parent</artifactId>
+	    <version>2.4.3</version>  
+	</parent>
 
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
-			<version>${boot.ver}</version>
 		</dependency>
 		
 		<dependency>
 		    <groupId>org.apache.tomcat.embed</groupId>
 		    <artifactId>tomcat-embed-jasper</artifactId>
-		    <version>9.0.44</version>		   
 		</dependency>
 		
 		<dependency>
 	        <groupId>org.springframework.boot</groupId>
 	        <artifactId>spring-boot-devtools</artifactId>
-	        <version>${boot.ver}</version>
 	    </dependency>
 	    
 	    <dependency>
@@ -38,28 +37,23 @@
 		<dependency>
 		    <groupId>com.oracle.database.jdbc</groupId>
 		    <artifactId>ojdbc8</artifactId>
-		    <version>19.10.0.0</version>		   
 		</dependency>
 		<dependency>
 		    <groupId>org.projectlombok</groupId>
 		    <artifactId>lombok</artifactId>
-		    <version>1.18.18</version>		   
 		</dependency>
 		<dependency>
 		    <groupId>javax.servlet</groupId>
 		    <artifactId>javax.servlet-api</artifactId>
-		    <version>4.0.1</version>		  
 		</dependency>
 		<dependency>
 		    <groupId>javax.servlet</groupId>
 		    <artifactId>jstl</artifactId>
-		    <version>1.2</version>		 
 		</dependency>
 		<dependency> <!-- 이 dependency를 추가하는 것만으로, security login form 이 작동한다. -->
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
-			<version>${boot.ver}</version>
-		</dependency>
+		</dependency>		
 	</dependencies>
 	
 	<build>
@@ -67,7 +61,6 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
-				<version>${boot.ver}</version>				
 			</plugin>
 		</plugins>	
 	</build>
