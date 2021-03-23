@@ -7,6 +7,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("/article")
 public class ArticleController {
-	@GetMapping("/1")
-	public void article1() {}	
+	@GetMapping
+	public String article() {
+		return "article/1";
+	}
 }
